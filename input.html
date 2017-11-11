@@ -4,30 +4,55 @@
 </head>
 <body>
 	<h2>Enter the data about Gram Panchayat:</h2>
-	<form action="input.php" method="post">
+	<form action="input/ingpinfo.php" method="post">
 	<p>** is compulsory.</p>
-	<p>Gram Panchayat Name:<input type="text" name="gpname">**</p>
 	<h2>Enter Gram Panchayat Info:</h2>
+	<p>Gram Panchayat Name:<input type="text" name="gpname">**</p>
 	<p>Sarpanch Name:<input type="text" name="sarpanch"></p>
 	<p>Secretary:<input type="text" name="secretary"></p>
 	<p>Population:<input type="text" name="population"></p>
 	<p>Area:<input type="text" name="area"></p>
+	<input type="submit" Value="Send"> <input type="reset" name="Reset">
+	</form>
+	
 	<h2>Revenue:</h2>
-	<p>Source:<input type="text" name="rsource">  Amount:<input type="text" name="ramount"></p>
+	<form action="input/inrevenue.php" method="post">
+	<p>Gram Panchayat Name:<input type="text" name="gpname">**</p>
+	<p>Source:<select name="rsource"><option value="state govt">state govt</option><option value="central govt">central govt</option><option value="tax">tax</option></select>  Amount:<input type="text" name="ramount"></p>
+	<input type="submit" Value="Send"> <input type="reset" name="Reset">
+	</form>
+	
 	<h2>Expenditure</h2>
-	<p>Source:<input type="text" name="esource">  Amount:<input type="text" name="eamount"></p>
+	<form action="input/inexpenditure.php" method="post">
+	<p>Gram Panchayat Name:<input type="text" name="gpname">**</p>
+	<p>Source:<select name="esource"><option value="maintaince">maintaince</option><option value="salary">salary</option><option value="pension">pension</option></select>  Amount:<input type="text" name="eamount"></p>
+	<input type="submit" Value="Send"> <input type="reset" name="Reset">
+	</form>
+	
 	<h2>Basic Infrastructure Detail:</h2>
+	<form action="input/ininfrastructure.php" method="post">
+	<p>Gram Panchayat Name:<input type="text" name="gpname">**</p>
 	<p>School:<input type="text" name="school"> Watersupply:<input type="text" name="watersupply"></p>
 	<p>Electricity:<input type="text" name="electricity"> Hospital:<input type="text" name="hospital"></p>
+	<input type="submit" Value="Send"> <input type="reset" name="Reset">
+	</form>
+	
 	<h2>Government Yojna Beneficiary:</h2>
+	<form action="input/ingovtyojna.php" method="post">
+	<p>Gram Panchayat Name:<input type="text" name="gpname">**</p>
 	<p>Indira Gandhi Awas Yojna IGAY:<input type="text" name="igay"></p>
 	<p>Ujwalla Yojna:<input type="text" name="ujwalla"> MNREGA:<input type="text" name="mnrega"></p>
+	<input type="submit" Value="Send"> <input type="reset" name="Reset">
+	</form>
+	
 	<h2>Public Work Description:</h2>
+	<form action="input/inpublic.php" method="post">
+	<p>Gram Panchayat Name:<input type="text" name="gpname">**</p>
 	<p>Townhall:<input type="text" name="townhall">
 	   Library:<input type="text" name="library">
 	   Sportcenter:<input type="text" name="sport">	
-	</p><br>
-	<input type="submit" name="Send"> <input type="reset" name="Reset">
+	</p>
+	<input type="submit" Value="Send"> <input type="reset" name="Reset">
 	</form>
 </body>
 </html>

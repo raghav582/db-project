@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>Delete</title>
+</head>
+<body>
+	<h2>Enter data which want to Delete:</h2>
+	<form action="delete/degpinfo.php" method="post">
+	<p>** is compulsory.</p>
+	<h2>Delete Gram Panchayat Info:</h2>
+	<p>Gram Panchayat Name:<input type="text" name="gpname">**</p> 
+	<input type="submit" value="Delete">
+	</form>
+	
+	<h2>Delete Revenue Info:</h2>
+	<form action="delete/derevenue.php" method="post">
+	<p>Gram Panchayat Name:<input type="text" name="gpname">**</p>
+	<p>Source:<select name="rsource"><option value="state govt">state govt</option><option value="central govt">central govt</option><option value="tax">tax</option></select>**</p>
+	<input type="submit" value="Delete">
+	</form>
+	
+	<h2>Delete Expenditure Info:</h2>
+	<form action="delete/deexpenditure.php" method="post">
+	<p>Gram Panchayat Name:<input type="text" name="gpname">**</p>
+	<p>Source:<select name="esource"><option value="maintaince">maintaince</option><option value="salary">salary</option><option value="pension">pension</option></select>**</p>
+	<input type="submit" value="Delete">
+	</form>
+	
+	<h2>Delete Basic Infrastructure Detail:</h2>
+	<form action="delete/deinfrastructure.php" method="post">
+	<p>Gram Panchayat Name:<input type="text" name="gpname">**</p>
+	<input type="submit" value="Delete">
+	</form>
+	
+	<h2>Delete Government Yojna Beneficiary:</h2>
+	<form action="delete/degovtyojna.php" method="post">
+	<p>Gram Panchayat Name:<input type="text" name="gpname">**</p>
+	<input type="submit" value="Delete">
+	</form>
+	
+	<h2>Delete Public Work Description:</h2>
+	<form action="delete/depublic.php" method="post">
+	<p>Gram Panchayat Name:<input type="text" name="gpname">**</p>
+	<input type="submit" value="Delete">
+	</form>
+</body>
+</html>
