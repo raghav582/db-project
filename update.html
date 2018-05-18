@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title>Update</title>
+</head>
+<body>
+	<h2>Enter data which want to update:</h2>
+	<form action="update/upgpinfo.php" method="post">
+	<p>** is compulsory.</p>
+	<h2>Update Gram Panchayat Info:</h2>
+	<p>Gram Panchayat Name:<input type="text" name="gpname">**</p>
+	<p>Sarpanch Name:<input type="text" name="sarpanch"></p>
+	<p>Secretary:<input type="text" name="secretary"></p>
+	<p>Population:<input type="text" name="population"></p>
+	<p>Area:<input type="text" name="area"></p>
+	<input type="submit" value="Update"> <input type="reset" name="Reset">
+	</form>
+	<h2>Update Revenue Info:</h2>
+	<form action="update/uprevenue.php" method="post">
+	<p>Gram Panchayat Name:<input type="text" name="gpname">**</p>
+	<p>Source:<select name="rsource"><option value="state govt">state govt</option><option value="central govt">central govt</option><option value="tax">tax</option></select>**  Amount:<input type="text" name="ramount"></p>
+	<input type="submit" value="Update"> <input type="reset" name="Reset">
+	</form>
+	<h2>Update Expenditure Info:</h2>
+	<form action="update/upexpenditure.php" method="post">
+	<p>Gram Panchayat Name:<input type="text" name="gpname">**</p>
+	<p>Source:<select name="esource"><option value="maintaince">maintaince</option><option value="salary">salary</option><option value="pension">pension</option></select>**  Amount:<input type="text" name="eamount"></p>
+	<input type="submit" value="Update"> <input type="reset" name="Reset">
+	</form>
+	<h2>Update Basic Infrastructure Detail:</h2>
+	<form action="update/upinfrastructure.php" method="post">
+	<p>Gram Panchayat Name:<input type="text" name="gpname">**</p>
+	<p>School:<input type="text" name="school"> Watersupply:<input type="text" name="watersupply"></p>
+	<p>Electricity:<input type="text" name="electricity"> Hospital:<input type="text" name="hospital"></p>
+	<input type="submit" value="Update"> <input type="reset" name="Reset">
+	</form>
+	<h2>Update Government Yojna Beneficiary:</h2>
+	<form action="update/upgovtyojna.php" method="post">
+	<p>Gram Panchayat Name:<input type="text" name="gpname">**</p>
+	<p>Indira Gandhi Awas Yojna IGAY:<input type="text" name="igay"></p>
+	<p>Ujwalla Yojna:<input type="text" name="ujwalla"> MNREGA:<input type="text" name="mnrega"></p>
+	<input type="submit" value="Update"> <input type="reset" name="Reset">
+	</form>
+	<h2>Update Public Work Description:</h2>
+	<form action="update/uppublic.php" method="post">
+	<p>Gram Panchayat Name:<input type="text" name="gpname">**</p>
+	<p>Townhall:<input type="text" name="townhall">
+	   Library:<input type="text" name="library">
+	   Sportcenter:<input type="text" name="sport">	
+	</p><br>
+	<input type="submit" value="Update"> <input type="reset" name="Reset">
+	</form>
+</body>
+</html>

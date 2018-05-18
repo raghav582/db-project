@@ -7,9 +7,16 @@
 	try{
 		$conn =new PDO("mysql:host=$servername;dbname=$dbname",$username,$password);
 		$conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+		//required
+		if($_SERVER["REQUEST_METHOD"]=="POST")
+		{
+		if(empty($_POST["gpname"]))
+			echo "Gram Panchayat Name required.";
+		else
+		{
 		//Gp Info
 		$stmt=$conn->prepare("INSERT INTO gpinfo(gpname,sarpanch,secretary,population,area)
-		VALUES(:gpanme,:sarpanch,:secretary,:population,:area)
+		VALUES(:gpname,:sarpanch,:secretary,:population,:area)
 		");
 		$stmt->bindParam(':gpname',$gpname);
 		$stmt->bindParam(':sarpanch',$sarpanch);
@@ -28,7 +35,7 @@
 		}
 		
 		//Revenue
-		$stmt=$conn->prepare("INSERT INTO revenue(gpname,source,amount))
+		$stmt=$conn->prepare("INSERT INTO revenue(gpname,source,amount)
 		VALUES(:gpname,:source,:amount)
 		");
 		$stmt->bindParam(':gpname',$gpname);
@@ -44,7 +51,7 @@
 		}
 		
 		//expenditure
-		$stmt=$conn->prepare("INSERT INTO expenditure(gpname,source,amount))
+		$stmt=$conn->prepare("INSERT INTO expenditure(gpname,source,amount)
 		VALUES(:gpname,:source,:amount)
 		");
 		$stmt->bindParam(':gpname',$gpname);
@@ -60,7 +67,7 @@
 		}
 		
 		//govt yojna
-		$stmt=$conn->prepare("INSERT INTO govtyojna(gpname,IGAY,UjwallaYojna,MNREGA))
+		$stmt=$conn->prepare("INSERT INTO govtyojna(gpname,IGAY,UjwallaYojna,MNREGA)
 		VALUES(:gpname,:IGAY,:UjwallaYojna,:MNREGA)
 		");
 		$stmt->bindParam(':gpname',$gpname);
@@ -78,7 +85,7 @@
 		}
 		
 		//infrastructure
-		$stmt=$conn->prepare("INSERT INTO infrastructure(gpname,school,watersupply,electricity,hospital))
+		$stmt=$conn->prepare("INSERT INTO infrastructure(gpname,school,watersupply,electricity,hospital)
 		VALUES(:gpname,:school,:watersupply,:electricity,:hospital)
 		");
 		$stmt->bindParam(':gpname',$gpname);
@@ -98,7 +105,7 @@
 		}
 		
 		//public work
-		$stmt=$conn->prepare("INSERT INTO publicwork(gpname,townhall,sportcenter,library))
+		$stmt=$conn->prepare("INSERT INTO publicwork(gpname,townhall,sportcenter,library)
 		VALUES(:gpname,:townhall,:sportcenter,:library)
 		");
 		$stmt->bindParam(':gpname',$gpname);
@@ -115,6 +122,8 @@
 			$stmt->execute();
 		}
 		echo "database created sucessfully";
+		}
+		}
 	}
 	
 	catch(PDOException $e)
